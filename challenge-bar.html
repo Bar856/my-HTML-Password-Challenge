@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge Bar</title>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: black;">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-6" style="margin-top: 100px;">
+            <form>
+                <div class="form-group">
+            <h1 style="color: red;" ><b>what's the password?</b></h1>
+                        <br>
+            <input class="form-control" type="password" id="inp" style="background-color:black;width: auto;text-align: center;">
+            <button class="btn btn-default" id="btn1" style="background-color: black;color: red; margin-left: 30px;"> check pass </button>
+            <br>
+                    </div>
+                </form> 
+            
+        </div>
+    </div>
+    <h4 style="color: black;margin-left: 430px" >the password contains 4 digits (number), goodluck</h4>
+</div>
+</body>
+    <script>
+        $("#btn1").click(function(){
+            var s1 =  $("#inp").val();
+            if (s1.charAt(0) % 2 == 0 && s1.charAt(1) % 2 != 0 && s1.charAt(2) % 2 == 0 && s1.charAt(3) != 0){
+                alert("Password Correct!")
+            }else{
+                alert("wrong!")
+            }
+        });
+    </script>
+</html>
